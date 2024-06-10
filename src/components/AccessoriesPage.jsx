@@ -2,13 +2,13 @@ import styles from "../css/Products.module.css";
 
 import { useLoaderData } from "react-router-dom";
 
-function Supplements() {
-  const supplements = useLoaderData();
+function AccessoriesPage() {
+  const accessories = useLoaderData();
 
   return (
     <div className={styles.product_list}>
-      {console.log(supplements)}
-      {supplements?.map(({ url, url_image, price }) => (
+      {console.log(accessories)}
+      {accessories?.map(({ url, url_image, price }) => (
         <div key={url} className={styles.product_card}>
           <img src={url_image} />
           <p>{url.match(/\/(.*?)\//)[1].replace(/-/g, " ")}</p>
@@ -19,4 +19,4 @@ function Supplements() {
   );
 }
 
-export default Supplements;
+export default AccessoriesPage;
