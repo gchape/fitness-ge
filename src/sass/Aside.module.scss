@@ -1,0 +1,44 @@
+@mixin social($background-color) {
+  display: flex;
+  align-items: center;
+
+  width: 150px;
+  height: 35px;
+  padding-top: 5px;
+  padding-left: 15px;
+  background-color: $background-color;
+
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+
+  &:hover {
+    width: 180px;
+  }
+}
+
+.blue {
+  @include social(#3c5a9a);
+  position: fixed;
+
+  top: 200px;
+  right: -100px;
+  z-index: 999;
+}
+
+.green {
+  @include social(#25d366);
+  position: fixed;
+
+  top: 252px;
+  right: -100px;
+  z-index: 999;
+}
+
+.yellow {
+  @include social(rgba(227, 165, 32, 1));
+  position: fixed;
+
+  top: 302px;
+  right: -100px;
+  z-index: 999;
+}

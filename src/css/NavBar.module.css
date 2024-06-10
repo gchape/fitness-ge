@@ -1,0 +1,23 @@
+.navbar {
+  box-sizing: border-box;
+
+  width: 100%;
+  margin: 50px 0;
+  padding-left: 20%;
+
+  display: flex;
+  flex-flow: column;
+}
+
+.navbar a {
+  font-size: 1.15rem;
+
+  text-decoration: none;
+  padding: 15px 20px;
+  color: #f2f2f2;
+}
+
+.navbar a:hover {
+  background: none;
+  color: rgb(240, 154, 25);
+}
