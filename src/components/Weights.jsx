@@ -1,18 +1,9 @@
 import styles from "../css/Products.module.css";
 
-import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 
 function Weights() {
-  const [weights, setWeights] = useState(null);
-
-  useEffect(() => {
-    (async () => {
-      const resp = await fetch("src/assets/gym_weights.json");
-      const data = await resp.json();
-
-      setWeights(() => data.results[0].content.results.organic);
-    })();
-  }, []);
+  const weights = useLoaderData();
 
   return (
     <div className={styles.product_list}>

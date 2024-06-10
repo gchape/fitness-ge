@@ -1,18 +1,9 @@
 import styles from "../css/Products.module.css";
 
-import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 
 function Accessories() {
-  const [accessories, setAccessories] = useState(null);
-
-  useEffect(() => {
-    (async () => {
-      const resp = await fetch("src/assets/gym_accessories.json");
-      const data = await resp.json();
-
-      setAccessories(() => data.results[0].content.results.organic);
-    })();
-  }, []);
+  const accessories = useLoaderData();
 
   return (
     <div className={styles.product_list}>
