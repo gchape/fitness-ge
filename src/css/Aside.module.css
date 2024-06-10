@@ -1,0 +1,56 @@
+.blue {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 35px;
+  padding-top: 5px;
+  padding-left: 15px;
+  background-color: #3c5a9a;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  position: fixed;
+  top: 200px;
+  right: -100px;
+  z-index: 999;
+}
+.blue:hover {
+  width: 180px;
+}
+
+.green {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 35px;
+  padding-top: 5px;
+  padding-left: 15px;
+  background-color: #25d366;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  position: fixed;
+  top: 252px;
+  right: -100px;
+  z-index: 999;
+}
+.green:hover {
+  width: 180px;
+}
+
+.yellow {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 35px;
+  padding-top: 5px;
+  padding-left: 15px;
+  background-color: rgb(227, 165, 32);
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  position: fixed;
+  top: 302px;
+  right: -100px;
+  z-index: 999;
+}
+.yellow:hover {
+  width: 180px;
+}/*# sourceMappingURL=Aside.module.css.map */
