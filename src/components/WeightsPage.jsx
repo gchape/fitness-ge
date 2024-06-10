@@ -2,7 +2,7 @@ import styles from "../css/Products.module.css";
 
 import { useLoaderData } from "react-router-dom";
 
-function Weights() {
+function WeightsPage() {
   const weights = useLoaderData();
 
   return (
@@ -19,4 +19,4 @@ function Weights() {
   );
 }
 
-export default Weights;
+export default WeightsPage;

@@ -1,10 +1,11 @@
 import "./css/App.css";
+
 import HomePage from "./components/HomePage";
+import AccessoriesPage from "./components/AccessoriesPage";
+import SupplementsPage from "./components/SupplementsPage";
+import WeightsPage from "./components/WeightsPage";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Supplements from "./components/Supplements";
-import Accessories from "./components/Accessories";
-import Weights from "./components/Weights";
 
 function App() {
   const fetchAPI = async (url) => {
@@ -23,17 +24,17 @@ function App() {
           children: [
             {
               path: "supplements",
-              element: <Supplements />,
+              element: <SupplementsPage />,
               loader: () => fetchAPI("src/assets/gym_supplements.json"),
             },
             {
               path: "accessories",
-              element: <Accessories />,
+              element: <AccessoriesPage />,
               loader: () => fetchAPI("src/assets/gym_accessories.json"),
             },
             {
               path: "weights",
-              element: <Weights />,
+              element: <WeightsPage />,
               loader: () => fetchAPI("src/assets/gym_weights.json"),
             },
           ],

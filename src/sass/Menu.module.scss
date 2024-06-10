@@ -19,5 +19,5 @@
 }
 
 .menu {
-  @include menu-style(#1b1b1b);
+  @include menu-style(rgb(28, 28, 28, 0.99));
 }
