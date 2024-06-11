@@ -1,8 +1,9 @@
 .menu {
   display: flex;
-  cursor: pointer;
   align-items: center;
   transition: opacity 0.5s;
+
+  cursor: pointer;
 
   &:hover {
     opacity: 0.75;
@@ -27,6 +28,7 @@
   span {
     font-size: 1.2rem;
     font-weight: 500;
+    
     margin-left: 8px;
   }
 }

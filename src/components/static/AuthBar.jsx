@@ -5,12 +5,8 @@ function AuthBar() {
   return (
     <div style={{ display: "flex", alignItems: "center" }}>
       <img src="login-avatar.png" width="22.5px" />
-      <Link to={"/user/login"} className={styles.login}>
+      <Link to={"/log-in"} className={styles.login}>
         log in
-      </Link>
-      /
-      <Link to={"/user/register"} className={styles.register}>
-        register
       </Link>
     </div>
   );

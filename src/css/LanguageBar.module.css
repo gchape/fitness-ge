@@ -1,21 +1,17 @@
 .language_bar {
-  height: 3vh;
-
   box-sizing: border-box;
-
+  height: 3vh;
   display: flex;
   justify-content: flex-end;
-
   padding: 0.8vh;
-  background-color: rgba(78, 176, 22, 1);
+  background-color: rgb(78, 176, 22);
 }
 
 .language {
   margin-right: 12.5px;
   transition: transform 0.2s;
 }
-
 .language:hover {
   cursor: pointer;
   transform: scale(1.1);
-}
+}/*# sourceMappingURL=LanguageBar.module.css.map */

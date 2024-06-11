@@ -1,19 +1,29 @@
 .navbar {
-  max-width: 50%;
-  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
 }
-
 .navbar a {
+  display: flex;
+  align-items: center;
+  height: 50px;
   box-sizing: border-box;
-  padding: 12px 10px;
-  display: block;
-
+  padding-top: 5px;
+  padding: 0 20px;
   text-decoration: none;
-  font-size: 1rem;
-  color: #f2f2f2;
+  color: #333;
+  border-bottom: 1px solid rgba(129, 129, 129, 0.2);
+  transition: background-color 0.3s, color 0.3s;
 }
-
+.navbar a:last-child {
+  box-sizing: content-box;
+  padding: 12.5px 20px;
+}
 .navbar a:hover {
-  background: none;
-  color: rgb(240, 154, 25);
-}
+  color: #000;
+  background-color: #eaeaea;
+}/*# sourceMappingURL=NavBar.module.css.map */

@@ -7,7 +7,7 @@ function Menu({ setMenuMode }) {
   return (
     <div className={styles.overlay} onClick={() => setMenuMode(() => false)}>
       <div className={styles.menu} onClick={(e) => e.stopPropagation()}>
-        <Search />
+        <Search setMenuMode={setMenuMode} />
         <NavBar setMenuMode={setMenuMode} />
       </div>
     </div>

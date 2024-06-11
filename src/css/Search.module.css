@@ -1,38 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 .search_bar {
+  width: 100%;
   display: flex;
   align-items: center;
-
   box-sizing: border-box;
-
+}
+.search_bar .input {
   width: 85%;
-  margin: 0 auto;
-  margin-top: 55px;
-}
-
-.input {
+  height: 70px;
   padding-left: 15px;
-  width: 88%;
-  height: 32px;
-
   color: #000000;
-  font-size: 0.95rem;
-
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
+  border: 1px solid rgb(236, 231, 231);
+  cursor: initial;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
 }
-
-.search {
-  height: 40px;
-  width: 17%;
-
+.search_bar .search {
+  height: 75px;
+  width: 15%;
   cursor: pointer;
   padding: 0;
   margin: 0;
-
   border: none;
-
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-
-  background: url("bullet-magnifier-search.png") #7c0 no-repeat 5px center;
+  background: url("bullet-magnifier-search.png") #228cb6 no-repeat center;
+  transition: background-color 0.25s;
 }
+.search_bar .search:hover {
+  background-color: #7c0;
+}/*# sourceMappingURL=Search.module.css.map */

@@ -7,7 +7,6 @@ function WeightsPage() {
 
   return (
     <div className={styles.product_list}>
-      {console.log(weights)}
       {weights?.map(({ url, url_image, price }) => (
         <div key={url} className={styles.product_card}>
           <img src={url_image} />

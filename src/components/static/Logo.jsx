@@ -1,3 +1,5 @@
+import styles from "../../css/Logo.module.css";
+
 import { useNavigate } from "react-router-dom";
 
 function Logo() {
@@ -5,16 +7,11 @@ function Logo() {
 
   return (
     <img
+      className={styles.logo}
       onClick={() => {
         navigate("/");
       }}
       src="logo.png"
-      style={{
-        position: "absolute",
-        cursor: "pointer",
-        width: "90px",
-        left: "46%",
-      }}
     />
   );
 }

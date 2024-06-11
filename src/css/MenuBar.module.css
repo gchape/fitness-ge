@@ -1,8 +1,8 @@
 .menu {
   display: flex;
-  cursor: pointer;
   align-items: center;
   transition: opacity 0.5s;
+  cursor: pointer;
 }
 .menu:hover {
   opacity: 0.75;

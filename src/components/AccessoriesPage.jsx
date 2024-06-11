@@ -7,7 +7,6 @@ function AccessoriesPage() {
 
   return (
     <div className={styles.product_list}>
-      {console.log(accessories)}
       {accessories?.map(({ url, url_image, price }) => (
         <div key={url} className={styles.product_card}>
           <img src={url_image} />

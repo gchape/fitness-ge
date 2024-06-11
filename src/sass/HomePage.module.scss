@@ -2,10 +2,16 @@
   width: 100vw;
   height: 90vh;
 
-  opacity: 0.80;
-  background-blend-mode: luminosity;
+  opacity: 0.6;
+
   background-image: url("fitness-ge.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media (min-width: 900px) {
+  .main {
+    background-image: url("fitness-ge2.jpg");
+  }
 }
