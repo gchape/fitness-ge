@@ -26,13 +26,13 @@ export const searchPageLoader = async ({ params }) => {
 
   return [
     ...supplementsData.results[0].content.results.organic.filter((s) =>
-      s.title.toLowerCase().includes(params.query)
+      s.title.toLowerCase().includes(params.query.trim().toLowerCase())
     ),
     ...accessoriesData.results[0].content.results.organic.filter((s) =>
-      s.title.toLowerCase().includes(params.query)
+      s.title.toLowerCase().includes(params.query.trim().toLowerCase())
     ),
     ...weightsData.results[0].content.results.organic.filter((s) =>
-      s.title.toLowerCase().includes(params.query)
+      s.title.toLowerCase().includes(params.query.trim().toLowerCase())
     ),
   ];
 };
