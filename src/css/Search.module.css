@@ -23,7 +23,7 @@
   padding: 0;
   margin: 0;
   border: none;
-  background: url("bullet-magnifier-search.png") #228cb6 no-repeat center;
+  background: url("/bullet-magnifier-search.png") #228cb6 no-repeat center;
   transition: background-color 0.25s;
 }
 .search_bar .search:hover {

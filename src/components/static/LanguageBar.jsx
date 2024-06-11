@@ -4,11 +4,11 @@ function LanguageBar() {
   return (
     <div className={styles.language_bar}>
       <img
-        src="ge.svg"
+        src="/ge.svg"
         className={styles.language}
       />
       <img
-        src="en.svg"
+        src="/en.svg"
         className={styles.language}
       />
     </div>
