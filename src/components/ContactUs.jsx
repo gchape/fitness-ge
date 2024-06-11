@@ -59,6 +59,7 @@ function ContactUs() {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const contactUsAction = async ({ request }) => {
   const formData = await request.formData();
   const jsonString = JSON.stringify(Object.fromEntries(formData));

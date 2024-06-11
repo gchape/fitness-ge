@@ -20,9 +20,9 @@ function SearchPage() {
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const searchPageLoader = async ({ params }) => {
-  const supplementsData = await fetchData("src/assets/gym_supplements.json");
-  const accessoriesData = await fetchData("src/assets/gym_accessories.json");
-  const weightsData = await fetchData("src/assets/gym_weights.json");
+  const supplementsData = await fetchData("/assets/gym_supplements.json");
+  const accessoriesData = await fetchData("/assets/gym_accessories.json");
+  const weightsData = await fetchData("/assets/gym_weights.json");
 
   return [
     ...supplementsData.results[0].content.results.organic.filter((s) =>

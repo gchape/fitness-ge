@@ -32,17 +32,17 @@ function App() {
               {
                 path: "supplements",
                 element: <SupplementsPage />,
-                loader: () => fetchAPI("src/assets/gym_supplements.json"),
+                loader: () => fetchAPI("/assets/gym_supplements.json"),
               },
               {
                 path: "accessories",
                 element: <AccessoriesPage />,
-                loader: () => fetchAPI("src/assets/gym_accessories.json"),
+                loader: () => fetchAPI("/assets/gym_accessories.json"),
               },
               {
                 path: "weights",
                 element: <WeightsPage />,
-                loader: () => fetchAPI("src/assets/gym_weights.json"),
+                loader: () => fetchAPI("/assets/gym_weights.json"),
               },
               {
                 path: "contact-us",
