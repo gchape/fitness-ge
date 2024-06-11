@@ -19,5 +19,8 @@
 }
 
 .menu {
-  @include menu-style(rgb(28, 28, 28, 0.99));
+  @include menu-style(white);
+
+  display: flex;
+  flex-flow: column nowrap;
 }

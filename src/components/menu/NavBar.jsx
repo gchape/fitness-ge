@@ -9,13 +9,16 @@ function NavBar({ setMenuMode }) {
   return (
     <div className={styles.navbar}>
       <NavLink to={"/supplements"} onClick={action}>
-        💪🏽 Supplements
+        Supplements 💊
       </NavLink>
       <NavLink to={"/accessories"} onClick={action}>
-        🎒 Accessories
+        Accessories 🛍️
       </NavLink>
       <NavLink to={"/weights"} onClick={action}>
-        🏋🏻‍♂️ Weights
+        Weights 🏋️
+      </NavLink>
+      <NavLink to="/contact-us" onClick={action}>
+        Contact Us 💬
       </NavLink>
     </div>
   );

@@ -4,7 +4,8 @@
   font-size: 1.1rem;
   text-decoration: none;
   transition: color 0.3s ease;
+
+  &:hover {
+    color: #007bff;
+  }
 }
-.login:hover {
-  color: #007bff;
-}/*# sourceMappingURL=AuthBar.module.css.map */

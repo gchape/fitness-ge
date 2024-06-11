@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
+
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
+
+  a {
+    display: flex;
+    align-items: center;
+
+    height: 50px;
+    box-sizing: border-box;
+
+    padding-top: 5px;
+    padding: 0 20px;
+
+    text-decoration: none;
+
+    color: #333;
+    border-bottom: 1px solid rgba(129, 129, 129, 0.2);
+
+    transition: background-color 0.3s, color 0.3s;
+
+    &:last-child {
+      box-sizing: content-box;
+      padding: 12.5px 20px;
+    }
+
+    &:hover {
+      color: #000;
+      background-color: #eaeaea;
+    }
+  }
+}
