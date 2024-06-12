@@ -18,30 +18,4 @@ function SearchPage() {
   );
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const searchPageLoader = async ({ params }) => {
-  const supplementsData = await fetchData("/assets/gym_supplements.json");
-  const accessoriesData = await fetchData("/assets/gym_accessories.json");
-  const weightsData = await fetchData("/assets/gym_weights.json");
-
-  return [
-    ...supplementsData.results[0].content.results.organic.filter((s) =>
-      s.title.toLowerCase().includes(params.query.trim().toLowerCase())
-    ),
-    ...accessoriesData.results[0].content.results.organic.filter((s) =>
-      s.title.toLowerCase().includes(params.query.trim().toLowerCase())
-    ),
-    ...weightsData.results[0].content.results.organic.filter((s) =>
-      s.title.toLowerCase().includes(params.query.trim().toLowerCase())
-    ),
-  ];
-};
-
-const fetchData = async (url) => {
-  const resp = await fetch(url);
-  const productData = await resp.json();
-
-  return productData;
-};
-
 export default SearchPage;
