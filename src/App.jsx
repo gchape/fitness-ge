@@ -11,14 +11,28 @@ import ThankYouPage from "./components/ThankYouPage";
 import { Provider } from "react-redux";
 
 import store from "./store";
-import SearchPage, { searchPageLoader } from "./components/SearchPage";
+import SearchPage from "./components/SearchPage";
 
 function App() {
-  const fetchAPI = async (url) => {
-    const resp = await fetch(url);
-    const data = await resp.json();
+  const url = {
+    supplements: "/assets/gym_supplements.json",
+    accessories: "/assets/gym_accessories.json",
+    weights: "/assets/gym_weights.json",
+  };
 
-    return data.results[0].content.results.organic;
+  const fetchData = async (urls, f) => {
+    return await urls.reduce(async (accumulatorPromise, url) => {
+      const accumulator = await accumulatorPromise;
+      let resp = await fetch(url);
+      let data = await resp.json();
+
+      return [
+        ...accumulator,
+        ...(f === undefined
+          ? data.results[0].content.results.organic
+          : f(data.results[0].content.results.organic)),
+      ];
+    }, Promise.resolve([]));
   };
 
   return (
@@ -32,17 +46,17 @@ function App() {
               {
                 path: "supplements",
                 element: <SupplementsPage />,
-                loader: () => fetchAPI("/assets/gym_supplements.json"),
+                loader: () => fetchData([url.supplements]),
               },
               {
                 path: "accessories",
                 element: <AccessoriesPage />,
-                loader: () => fetchAPI("/assets/gym_accessories.json"),
+                loader: () => fetchData([url.accessories]),
               },
               {
                 path: "weights",
                 element: <WeightsPage />,
-                loader: () => fetchAPI("/assets/gym_weights.json"),
+                loader: () => fetchData([url.weights]),
               },
               {
                 path: "contact-us",
@@ -56,7 +70,17 @@ function App() {
               {
                 path: "search/:query",
                 element: <SearchPage />,
-                loader: searchPageLoader,
+                loader: ({ params }) => {
+                  return fetchData(
+                    [url.supplements, url.accessories, url.weights],
+                    (data) =>
+                      data.filter((pt) =>
+                        pt.title
+                          .toLowerCase()
+                          .includes(params.query.trim().toLowerCase())
+                      )
+                  );
+                },
               },
             ],
           },

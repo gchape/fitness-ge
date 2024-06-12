@@ -36,7 +36,7 @@ i18n
           "First name": "სახელი",
           "Last name": "გვარი",
           Email: "ელფოსტა",
-          Message: "მესიჯი",
+          Message: "შეტყობინება",
           "Contact Us": "დაგვიკავშირდით",
           submit: {
             "Contact Us": "გაგზავნა",
