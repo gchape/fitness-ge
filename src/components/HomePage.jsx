@@ -1,5 +1,6 @@
-import { Outlet, useLocation } from "react-router-dom";
 import styles from "../css/HomePage.module.css";
+
+import { Outlet, useLocation } from "react-router-dom";
 import Index from "./index/Index";
 
 function HomePage() {
