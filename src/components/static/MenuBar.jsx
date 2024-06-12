@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import styles from "../../css/MenuBar.module.css";
 
 // eslint-disable-next-line react/prop-types
 function MenuBar({ setMenuMode }) {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.menu} onClick={() => setMenuMode(() => true)}>
       <svg
@@ -20,7 +23,7 @@ function MenuBar({ setMenuMode }) {
         <line className="line2" x1="0" y1="12" x2="21" y2="12"></line>
         <line className="line3" x1="0" y1="18" x2="21" y2="18"></line>
       </svg>
-      <span>Menu</span>
+      <span>{t("Menu")}</span>
     </div>
   );
 }
