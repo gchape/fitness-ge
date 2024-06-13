@@ -1,24 +1,33 @@
 import styles from "../css/HomePage.module.css";
 
 import { Outlet, useLocation } from "react-router-dom";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import Index from "./index/Index";
 
 function HomePage() {
   const url = useLocation();
-
   const [count, setCount] = useState(1);
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => setWidth(() => window.innerWidth));
+
+    return () => {
+      window.removeEventListener("resize", () =>
+        setWidth(() => window.innerWidth)
+      );
+    };
+  }, []);
 
   const serviceOneRef = useRef(
     <div className={styles.service_card}>
       <img
         src="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/99334b94-5373-4aec-99bb-e027c93db2e2/saitistvis.png"
-        alt=""
       />
       <h2>
         ვაკის და საბურთალოს ფილიალი
-        <span> ნინო რამიშვილის 20 - სანდრო ეულის 7 </span>
+        <span>ნინო რამიშვილის 20</span>
       </h2>
       <ul>
         <li>კარდიო ზონა</li>
@@ -26,7 +35,6 @@ function HomePage() {
         <li>გარე სავარჯიშო სივრცე</li>
         <li>Techno Gym ტრენაჟორები</li>
         <li>წევრთა ლაუნჯი</li>
-        <li>მასაჟის სივრცე</li>
       </ul>
       <div className={styles.prices}>
         <h3>
@@ -43,17 +51,15 @@ function HomePage() {
     <div className={styles.service_card}>
       <img
         src="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/a4961302-aa84-4fc2-b108-1bd56f4e47e3/1-saitistvis.png"
-        alt=""
       />
       <h2>
         სითი მოლის და მზიურის ფილიალი
-        <span>პეტრე ქავთარაძე 1 (სითი მოლი) - ჭაბუა ამირეჯიბის 2</span>
+        <span>პეტრე ქავთარაძე 1 (სითი მოლი)</span>
       </h2>
       <ul>
         <li>კარდიო ზონა</li>
         <li>მძიმე წონების ზონა</li>
-        <li>Life Fitness ტრენაჟორები</li>
-        <li>ჯგუფური ვარჯიშების სტუდია</li>
+        <li>Life Fitness</li>
         <li>ფუნქციონალური ვარჯიშების ზონა</li>
         <li>Ergoline სოლარიუმი</li>
       </ul>
@@ -72,7 +78,6 @@ function HomePage() {
     <div className={styles.service_card}>
       <img
         src="https://files.elfsight.com/storage/1d330207-1ad5-4d39-bb68-27190fd2e199/62dc4a50-4b2a-4700-a676-12415b7e0e52.jpeg"
-        alt=""
       />
       <h2>
         ბათუმის ფილიალი
@@ -103,7 +108,13 @@ function HomePage() {
         <>
           <main className={styles.main}>
             <div className={styles.services}>
-              {screen.width <= 600 && (
+              {width > 750 ? (
+                <>
+                  {serviceOneRef.current}
+                  {serviceTwoRef.current}
+                  {serviceThreeRef.current}
+                </>
+              ) : (
                 <>
                   <img
                     src="/left-arrow.svg"

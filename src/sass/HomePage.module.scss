@@ -8,13 +8,13 @@
   padding: 10px 30px;
 
   width: 100vw;
-  height: 88.8vh;
+  height: 90vh;
 
   background-image: url("/fitness-ge.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  filter: opacity(0.8);
+  filter: brightness(1);
 }
 
 .services {
@@ -22,15 +22,15 @@
   align-items: center;
   justify-content: space-between;
 
+  width: 70%;
   height: 90%;
 
   .service_card {
     display: flex;
     flex-flow: column;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
-    width: 30%;
+    width: 25%;
     height: 100%;
 
     border-radius: 2.5px;
@@ -62,7 +62,7 @@
       background-color: rgb(98, 176, 20);
 
       span {
-        display: inline-block;
+        display: block;
 
         margin-top: 5px;
 
@@ -125,15 +125,16 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   .services {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+
     row-gap: 40px;
 
     .service_card {
-      width: 80%;
+      width: 88%;
       height: 100%;
 
       img {
@@ -170,6 +171,24 @@
           font-size: 0.85rem;
         }
       }
+    }
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1300px) {
+  .services {
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow-y: scroll;
+
+    width: 50%;
+
+    row-gap: 50px;
+
+    .service_card {
+      width: 65%;
     }
   }
 }

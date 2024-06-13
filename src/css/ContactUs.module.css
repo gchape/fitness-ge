@@ -15,12 +15,14 @@
 .overlay {
   height: 90vh;
   display: flex;
+  justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .form {
   position: relative;
+  z-index: 999;
   max-width: 600px;
   margin: 0 auto;
   padding: 56px;
@@ -66,15 +68,6 @@
 .form .group_email textarea,
 .form .group_message textarea {
   height: 250px;
-}
-.form .group_agreement input {
-  margin: 0;
-  margin-right: 8px;
-  float: left;
-}
-.form .group_agreement label {
-  cursor: pointer;
-  font-size: 1.1rem;
 }
 .form .group_submit {
   margin-top: 30px;

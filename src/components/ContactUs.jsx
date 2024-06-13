@@ -48,16 +48,6 @@ function ContactUs() {
           </div>
         </div>
 
-        <div className={styles.group_agreement}>
-          <input type="checkbox" name="agreement" id="agreement" />
-          <label htmlFor="agreement">
-            {t(
-              "Yes, I would like to receive marketing-related communications about Fitness.ge products, services, and events."
-            )}
-            .
-          </label>
-        </div>
-
         <div className={styles.group_submit}>
           <input type="submit" value={t("submit.Contact Us")} />
         </div>
