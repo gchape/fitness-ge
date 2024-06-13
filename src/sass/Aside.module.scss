@@ -6,7 +6,7 @@
   height: 35px;
   padding-top: 5px;
   padding-left: 15px;
-  
+
   background-color: $background-color;
 
   border-top-left-radius: 30px;
@@ -42,4 +42,12 @@
   top: 302px;
   right: -100px;
   z-index: 999;
+}
+
+@media screen and (max-width: 600px) {
+  .blue,
+  .green,
+  .yellow {
+    right: -110px;
+  }
 }

@@ -53,4 +53,12 @@
 }
 .yellow:hover {
   width: 180px;
+}
+
+@media screen and (max-width: 600px) {
+  .blue,
+  .green,
+  .yellow {
+    right: -110px;
+  }
 }/*# sourceMappingURL=Aside.module.css.map */

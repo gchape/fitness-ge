@@ -1,23 +1,23 @@
 .main {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
   width: 100vw;
-  height: 90vh;
+  height: 88.8vh;
   background-image: url("/fitness-ge.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  filter: opacity(0.4);
+  filter: opacity(0.8);
 }
 
 .services {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
-  z-index: 990;
-  top: 15%;
-  left: 10%;
-  right: 10%;
-  height: 80%;
+  height: 90%;
 }
 .services .service_card {
   display: flex;
@@ -92,23 +92,37 @@
 }
 @media (max-width: 600px) {
   .services {
-    top: 16.5%;
     flex-flow: column nowrap;
-    justify-content: space-between;
-    row-gap: 20px;
-    overflow-y: scroll;
+    align-items: center;
+    justify-content: center;
+    row-gap: 40px;
   }
   .services .service_card {
     width: 80%;
+    height: 100%;
   }
   .services .service_card img {
-    display: none;
+    height: 120px;
   }
   .services .service_card h2 {
     padding: 15px;
-    font-size: 1rem;
+    font-size: 1.1rem;
+  }
+  .services .service_card h2 span {
+    font-size: 0.8rem;
   }
   .services .service_card ul {
-    height: 50%;
+    height: 35%;
+  }
+  .services .service_card ul li {
+    padding: 2.5px;
+  }
+  .services .service_card .prices h3 span {
+    font-size: 1.4rem;
+  }
+  .services .service_card .prices h4,
+  .services .service_card .prices h5,
+  .services .service_card .prices h6 {
+    font-size: 0.85rem;
   }
 }/*# sourceMappingURL=HomePage.module.css.map */
