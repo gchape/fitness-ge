@@ -1,15 +1,115 @@
 .main {
   width: 100vw;
   height: 90vh;
-  opacity: 0.6;
   background-image: url("/fitness-ge.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  filter: opacity(0.4);
+}
+
+.services {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 990;
+  top: 15%;
+  left: 10%;
+  right: 10%;
+  height: 80%;
+}
+.services .service_card {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30%;
+  height: 100%;
+  border-radius: 2.5px;
+  background-color: white;
+}
+.services .service_card img {
+  width: 100%;
+  height: 17%;
+  border-top-left-radius: 2.5px;
+  border-top-right-radius: 2.5px;
+}
+.services .service_card h2 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 32px;
+  height: 23%;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.35rem;
+  color: white;
+  background-color: rgb(98, 176, 20);
+}
+.services .service_card h2 span {
+  display: inline-block;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: white;
+  opacity: 0.9;
+}
+.services .service_card ul {
+  box-sizing: border-box;
+  height: 40%;
+}
+.services .service_card ul li {
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 1.2;
+}
+.services .service_card .prices {
+  margin: 0;
+}
+.services .service_card .prices h3 {
+  text-align: center;
+  font-size: 1rem;
+}
+.services .service_card .prices h3 span {
+  display: inline-block;
+  font-size: 1.8rem;
+}
+.services .service_card .prices h4,
+.services .service_card .prices h5,
+.services .service_card .prices h6 {
+  margin: 10px 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 @media (min-width: 900px) {
   .main {
     background-image: url("/fitness-ge2.jpg");
+  }
+}
+@media (max-width: 600px) {
+  .services {
+    top: 17.5%;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    row-gap: 50px;
+    overflow-y: scroll;
+  }
+  .services .service_card {
+    width: 80%;
+  }
+  .services .service_card img {
+    width: 100%;
+    height: 120px;
+  }
+  .services .service_card h2 {
+    padding: 15px;
+    font-size: 1rem;
+  }
+  .services .service_card ul {
+    height: 50%;
   }
 }/*# sourceMappingURL=HomePage.module.css.map */

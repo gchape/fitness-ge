@@ -1,11 +1,17 @@
 .login {
   color: #333;
   padding: 0 3.5px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-decoration: none;
   transition: color 0.3s ease;
 
   &:hover {
     color: #007bff;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .login {
+    font-size: 1rem;
   }
 }

@@ -6,25 +6,20 @@ import { useTranslation } from "react-i18next";
 import store from "../store";
 
 function ContactUs() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className={styles.overlay}>
       <Form method="post" action="/contact-us" className={styles.form}>
-        <h1 style={{ fontSize: i18n.language === "ka" && "1.2rem" }}>
-          {t("Contact Us")}
-        </h1>
-        <p style={{ fontSize: i18n.language === "ka" && "1rem" }}>
+        <h1>{t("Contact Us")}</h1>
+        <p>
           {t(
             "Let’s get this conversation started. Tell us a bit about yourself, andwe’ll get in touch as soon as we can"
           )}
           .
         </p>
 
-        <div
-          className={styles.group1}
-          style={{ fontSize: i18n.language === "ka" && "1rem" }}
-        >
+        <div className={styles.group1}>
           <div className={styles.group_firstname}>
             <label htmlFor="firstname">{t("First name")}</label>
             <div>
@@ -39,20 +34,14 @@ function ContactUs() {
           </div>
         </div>
 
-        <div
-          className={styles.group_email}
-          style={{ fontSize: i18n.language === "ka" && "1rem" }}
-        >
+        <div className={styles.group_email}>
           <label htmlFor="email">{t("Email")}</label>
           <div>
             <input type="email" name="email" id="email" required />
           </div>
         </div>
 
-        <div
-          className={styles.group_message}
-          style={{ fontSize: i18n.language === "ka" && "1rem" }}
-        >
+        <div className={styles.group_message}>
           <label htmlFor="message">{t("Message")}</label>
           <div>
             <textarea name="message" id="message" required></textarea>
@@ -61,26 +50,16 @@ function ContactUs() {
 
         <div className={styles.group_agreement}>
           <input type="checkbox" name="agreement" id="agreement" />
-          <label
-            htmlFor="agreement"
-            style={{ fontSize: i18n.language === "ka" && "0.9rem" }}
-          >
+          <label htmlFor="agreement">
             {t(
-              "Yes, I would like to receive marketing-related communications about Fitness.ge products, services, and events. I understand I may unsubscribe at any time"
+              "Yes, I would like to receive marketing-related communications about Fitness.ge products, services, and events."
             )}
             .
           </label>
         </div>
 
-        <div
-          className={styles.group_submit}
-          style={{ fontSize: i18n.language === "ka" && "0.9rem" }}
-        >
-          <input
-            type="submit"
-            value={t("submit.Contact Us")}
-            style={{ fontSize: i18n.language === "ka" && "1rem" }}
-          />
+        <div className={styles.group_submit}>
+          <input type="submit" value={t("submit.Contact Us")} />
         </div>
       </Form>
     </div>

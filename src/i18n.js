@@ -46,8 +46,8 @@ i18n
             "ჩვენ მივიღეთ თქვენი შეტყობინება და მალე დაგიკავშირდებით",
           "Let’s get this conversation started. Tell us a bit about yourself, andwe’ll get in touch as soon as we can":
             "დავიწყოთ ეს საუბარი. გვითხარით ცოტა თქვენს შესახებ და ჩვენ დაგიკავშირდებით როგორც კი შევძლებთ",
-          "Yes, I would like to receive marketing-related communications about Fitness.ge products, services, and events. I understand I may unsubscribe at any time":
-            "დიახ, მსურს მივიღო მარკეტინგთან დაკავშირებული კომუნიკაციები Fitness.ge-ს პროდუქტების, სერვისებისა და ღონისძიებების შესახებ. მესმის, რომ ნებისმიერ დროს შემიძლია გავაუქმო გამოწერა",
+          "Yes, I would like to receive marketing-related communications about Fitness.ge products, services, and events.":
+            "დიახ, მსურს მივიღო მარკეტინგთან დაკავშირებული კომუნიკაციები Fitness.ge-ს პროდუქტების, სერვისებისა და ღონისძიებების შესახებ",
         },
       },
     },

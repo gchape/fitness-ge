@@ -28,7 +28,15 @@
   span {
     font-size: 1.2rem;
     font-weight: 500;
-    
+
     margin-left: 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    span {
+      font-size: 1.1rem;
+    }
   }
 }
