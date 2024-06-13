@@ -12,6 +12,7 @@ import { Provider } from "react-redux";
 
 import store from "./store";
 import SearchPage from "./components/SearchPage";
+import LoginPage from "./components/LoginPage";
 
 function App() {
   const url = {
@@ -57,6 +58,10 @@ function App() {
                 path: "weights",
                 element: <WeightsPage />,
                 loader: () => fetchData([url.weights]),
+              },
+              {
+                path: "log-in",
+                element: <LoginPage />,
               },
               {
                 path: "contact-us",
