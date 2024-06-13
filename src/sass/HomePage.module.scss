@@ -17,7 +17,7 @@
   position: absolute;
   z-index: 990;
 
-  top: 15.5%;
+  top: 15%;
   left: 10%;
   right: 10%;
 
@@ -127,9 +127,11 @@
 
 @media (max-width: 600px) {
   .services {
+    top: 16.5%;
+
     flex-flow: column nowrap;
     justify-content: space-between;
-    row-gap: 50px;
+    row-gap: 20px;
 
     overflow-y: scroll;
 
