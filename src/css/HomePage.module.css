@@ -92,18 +92,17 @@
 }
 @media (max-width: 600px) {
   .services {
-    top: 17.5%;
+    top: 16.5%;
     flex-flow: column nowrap;
     justify-content: space-between;
-    row-gap: 50px;
+    row-gap: 20px;
     overflow-y: scroll;
   }
   .services .service_card {
     width: 80%;
   }
   .services .service_card img {
-    width: 100%;
-    height: 120px;
+    display: none;
   }
   .services .service_card h2 {
     padding: 15px;
