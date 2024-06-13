@@ -17,6 +17,7 @@
   height: 90vh;
 
   display: flex;
+  justify-content: center;
   align-items: center;
 
   background-color: rgba(0, 0, 0, 0.5);
@@ -24,6 +25,8 @@
 
 .form {
   position: relative;
+
+  z-index: 999;
 
   max-width: 600px;
 
@@ -90,20 +93,6 @@
     textarea {
       @extend %input-style;
       height: 250px;
-    }
-  }
-
-  .group_agreement {
-    input {
-      margin: 0;
-      margin-right: 8px;
-
-      float: left;
-    }
-
-    label {
-      cursor: pointer;
-      font-size: 1.1rem;
     }
   }
 

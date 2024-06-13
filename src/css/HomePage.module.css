@@ -1,30 +1,30 @@
 .main {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
   width: 100vw;
   height: 90vh;
   background-image: url("/fitness-ge.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  filter: opacity(0.4);
+  filter: brightness(1);
 }
 
 .services {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
-  z-index: 990;
-  top: 15%;
-  left: 10%;
-  right: 10%;
-  height: 80%;
+  width: 70%;
+  height: 90%;
 }
 .services .service_card {
   display: flex;
   flex-flow: column;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 30%;
+  justify-content: space-between;
+  width: 25%;
   height: 100%;
   border-radius: 2.5px;
   background-color: white;
@@ -47,7 +47,7 @@
   background-color: rgb(98, 176, 20);
 }
 .services .service_card h2 span {
-  display: inline-block;
+  display: block;
   margin-top: 5px;
   text-align: center;
   font-size: 0.85rem;
@@ -90,25 +90,52 @@
     background-image: url("/fitness-ge2.jpg");
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   .services {
-    top: 16.5%;
     flex-flow: column nowrap;
-    justify-content: space-between;
-    row-gap: 20px;
-    overflow-y: scroll;
+    align-items: center;
+    justify-content: center;
+    row-gap: 40px;
   }
   .services .service_card {
-    width: 80%;
+    width: 88%;
+    height: 100%;
   }
   .services .service_card img {
-    display: none;
+    height: 120px;
   }
   .services .service_card h2 {
     padding: 15px;
-    font-size: 1rem;
+    font-size: 1.1rem;
+  }
+  .services .service_card h2 span {
+    font-size: 0.8rem;
   }
   .services .service_card ul {
-    height: 50%;
+    height: 35%;
+  }
+  .services .service_card ul li {
+    padding: 2.5px;
+  }
+  .services .service_card .prices h3 span {
+    font-size: 1.4rem;
+  }
+  .services .service_card .prices h4,
+  .services .service_card .prices h5,
+  .services .service_card .prices h6 {
+    font-size: 0.85rem;
+  }
+}
+@media screen and (min-width: 750px) and (max-width: 1300px) {
+  .services {
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    overflow-y: scroll;
+    width: 50%;
+    row-gap: 50px;
+  }
+  .services .service_card {
+    width: 65%;
   }
 }/*# sourceMappingURL=HomePage.module.css.map */
