@@ -3,7 +3,6 @@ import { useState } from "react";
 import MenuBar from "../static/MenuBar";
 import AuthBar from "../static/AuthBar";
 import Header from "../static/Header";
-import Aside from "../static/Aside";
 import Logo from "../static/Logo";
 import Menu from "../menu/Menu";
 
@@ -18,7 +17,6 @@ function Index() {
         <AuthBar />
       </Header>
       {menuMode && <Menu setMenuMode={setMenuMode} />}
-      <Aside />
     </>
   );
 }
