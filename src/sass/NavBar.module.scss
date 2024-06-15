@@ -16,6 +16,8 @@
     height: 50px;
     box-sizing: border-box;
 
+    font-size: 1rem;
+
     padding-top: 5px;
     padding: 0 20px;
 
@@ -34,6 +36,14 @@
     &:hover {
       color: #000;
       background-color: #eaeaea;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    a {
+      font-size: 0.95rem;
     }
   }
 }
