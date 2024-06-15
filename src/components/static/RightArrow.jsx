@@ -1,5 +1,5 @@
 // eslint-disable-next-line react/prop-types
-function RightArrow({ setCount }) {
+function RightArrow({ onClick }) {
   return (
     <img
       src="/right-arrow.svg"
@@ -12,12 +12,7 @@ function RightArrow({ setCount }) {
         position: "absolute",
         right: "2%",
       }}
-      onClick={() =>
-        setCount((count) => {
-          if (count < 3) return count + 1;
-          else return count;
-        })
-      }
+      onClick={onClick}
     />
   );
 }

@@ -1,3 +1,4 @@
-function LoginPage() {}
+function LoginPage() {
+}
 
 export default LoginPage;

@@ -7,6 +7,7 @@
   border-radius: 2.5px;
   color: white;
   background-color: hsl(0, 0%, 20%);
+  position: relative; /* Added for positioning the shake animation */
 }
 .service_card img {
   width: 100%;
@@ -65,6 +66,26 @@
   text-align: center;
   font-size: 1rem;
   font-weight: 400;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.service_card:hover {
+  animation: shake 0.5s ease;
 }
 
 @media (max-width: 750px) {

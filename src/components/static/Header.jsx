@@ -8,7 +8,6 @@ function Header({ children }) {
     <>
       <LanguageBar />
       <div className={styles.header}>{children}</div>
-      <hr className={styles.hr} />
     </>
   );
 }
