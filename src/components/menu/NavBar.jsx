@@ -1,26 +1,26 @@
 import { useTranslation } from "react-i18next";
 import styles from "../../css/NavBar.module.css";
-
 import { NavLink } from "react-router-dom";
 
-// eslint-disable-next-line react/prop-types
 function NavBar({ setMenuMode }) {
   const { t } = useTranslation();
 
-  const action = () => setMenuMode(() => false);
+  const handleMenuClose = () => {
+    setMenuMode(false);
+  };
 
   return (
     <div className={styles.navbar}>
-      <NavLink to={"/supplements"} onClick={action}>
-        {t("Supplements")} 💊
+      <NavLink to={"/supplements"} onClick={handleMenuClose}>
+        {t("navbar.Supplements")} 💊
       </NavLink>
-      <NavLink to={"/accessories"} onClick={action}>
-        {t("Accessories")} 🛍️
+      <NavLink to={"/accessories"} onClick={handleMenuClose}>
+        {t("navbar.Accessories")} 🛍️
       </NavLink>
-      <NavLink to={"/weights"} onClick={action}>
-        {t("Weights")} 🏋️
+      <NavLink to={"/weights"} onClick={handleMenuClose}>
+        {t("navbar.Weights")} 🏋️
       </NavLink>
-      <NavLink to="/contact-us" onClick={action}>
+      <NavLink to="/contact-us" onClick={handleMenuClose}>
         {t("Contact Us")} 💬
       </NavLink>
     </div>

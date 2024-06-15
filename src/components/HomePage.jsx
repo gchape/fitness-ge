@@ -12,7 +12,9 @@ import { useTranslation } from "react-i18next";
 
 function HomePage() {
   const url = useLocation();
+
   const { t } = useTranslation();
+  
   const [count, setCount] = useState(1);
   const [width, setWidth] = useState(window.innerWidth);
 

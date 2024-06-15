@@ -12,51 +12,37 @@ function ContactUs() {
     <div className={styles.overlay}>
       <Form method="post" action="/contact-us" className={styles.form}>
         <h1>{t("Contact Us")}</h1>
-        <p>
-          {t(
-            "Let’s get this conversation started. Tell us a bit about yourself, andwe’ll get in touch as soon as we can"
-          )}
-          .
-        </p>
+        <p>{t("contactUs.intro")}.</p>
 
         <div className={styles.group1}>
           <div className={styles.group_firstname}>
-            <label htmlFor="firstname">{t("First name")}</label>
-            <div>
-              <input type="text" name="firstname" id="firstname" required />
-            </div>
+            <label htmlFor="firstname">{t("contactUs.First Name")}</label>
+            <input type="text" name="firstname" id="firstname" required />
           </div>
           <div className={styles.group_lastname}>
-            <label htmlFor="lastname">{t("Last name")}</label>
-            <div>
-              <input type="text" name="lastname" id="lastname" required />
-            </div>
+            <label htmlFor="lastname">{t("contactUs.Last Name")}</label>
+            <input type="text" name="lastname" id="lastname" required />
           </div>
         </div>
 
         <div className={styles.group_email}>
-          <label htmlFor="email">{t("Email")}</label>
-          <div>
-            <input type="email" name="email" id="email" required />
-          </div>
+          <label htmlFor="email">{t("contactUs.Email")}</label>
+          <input type="email" name="email" id="email" required />
         </div>
 
         <div className={styles.group_message}>
-          <label htmlFor="message">{t("Message")}</label>
-          <div>
-            <textarea name="message" id="message" required></textarea>
-          </div>
+          <label htmlFor="message">{t("contactUs.Message")}</label>
+          <textarea name="message" id="message" rows="5" required></textarea>
         </div>
 
         <div className={styles.group_submit}>
-          <input type="submit" value={t("submit.Contact Us")} />
+          <input type="submit" value={t("Submit")} />
         </div>
       </Form>
     </div>
   );
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const contactUsAction = async ({ request }) => {
   const formData = await request.formData();
   const jsonString = JSON.stringify(Object.fromEntries(formData));
