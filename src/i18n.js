@@ -18,6 +18,12 @@ i18n
           auth: {
             "log in": "log in",
           },
+          sort: {
+            by: "Sort by",
+            Ascending: "Ascending",
+            Descending: "Descending",
+          },
+          Price: "Price",
           "Search product...": "Search product...",
           navbar: {
             Supplements: "Supplements",
@@ -48,6 +54,12 @@ i18n
           auth: {
             "log in": "შესვლა",
           },
+          sort: {
+            by: "დახარისხება",
+            Ascending: "ზრდადობით",
+            Descending: "კლებადობით",
+          },
+          Price: "ფასი",
           "Search product...": "პროდუქტის ძებნა...",
           navbar: {
             Supplements: "საკვები დანამატები",

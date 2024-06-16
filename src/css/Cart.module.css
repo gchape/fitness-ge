@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+
+.cart {
+  transition: transform 0.2s;
+}
+.cart:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}/*# sourceMappingURL=Cart.module.css.map */

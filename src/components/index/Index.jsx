@@ -5,6 +5,7 @@ import AuthBar from "../static/AuthBar";
 import Header from "../static/Header";
 import Logo from "../static/Logo";
 import Menu from "../menu/Menu";
+import Cart from "../static/Cart";
 
 function Index() {
   const [menuMode, setMenuMode] = useState(false);
@@ -14,7 +15,10 @@ function Index() {
       <Header>
         <MenuBar setMenuMode={setMenuMode} />
         <Logo />
-        <AuthBar />
+        <div style={{ display: "flex", columnGap: "20px" }}>
+          <AuthBar />
+          <Cart />
+        </div>
       </Header>
       {menuMode && <Menu setMenuMode={setMenuMode} />}
     </>

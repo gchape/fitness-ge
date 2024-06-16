@@ -2,3 +2,9 @@
   cursor: pointer;
   width: 90px;
 }
+
+@media screen and (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+}

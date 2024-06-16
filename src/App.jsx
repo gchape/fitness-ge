@@ -13,6 +13,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 import SearchPage from "./components/SearchPage";
 import LoginPage from "./components/LoginPage";
+import CartPage from "./components/CartPage";
 
 function App() {
   const url = {
@@ -62,6 +63,10 @@ function App() {
               {
                 path: "log-in",
                 element: <LoginPage />,
+              },
+              {
+                path: "cart",
+                element: <CartPage />,
               },
               {
                 path: "contact-us",
