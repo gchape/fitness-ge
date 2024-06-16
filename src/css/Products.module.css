@@ -21,6 +21,12 @@
 .product_list .product_card:hover {
   box-shadow: 0 0 10px 0 gray;
 }
+.product_list .product_card:hover code {
+  display: none;
+}
+.product_list .product_card:hover button {
+  display: block;
+}
 .product_list .product_card img {
   width: 80%;
   max-height: 250px;
@@ -38,4 +44,21 @@
   font-size: 0.8rem;
   border-bottom: 1px solid;
   color: rgb(14, 218, 197);
+}
+.product_list .product_card button {
+  box-sizing: border-box;
+  display: none;
+  padding: 8px 15px;
+  max-width: 150px;
+  max-height: 40px;
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  color: white;
+  background-color: #6ca300;
+  transition: background-color 0.3s, color 0.3s;
+}
+.product_list .product_card button:hover {
+  color: azure;
+  background-color: #7c0;
 }/*# sourceMappingURL=Products.module.css.map */

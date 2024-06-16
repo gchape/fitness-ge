@@ -26,6 +26,14 @@
 
     &:hover {
       box-shadow: 0 0 10px 0 gray;
+
+      code {
+        display: none;
+      }
+
+      button {
+        display: block;
+      }
     }
 
     img {
@@ -53,6 +61,32 @@
       border-bottom: 1px solid;
 
       color: rgb(14, 218, 197);
+    }
+
+    button {
+      box-sizing: border-box;
+
+      display: none;
+
+      padding: 8px 15px;
+
+      max-width: 150px;
+      max-height: 40px;
+
+      border: none;
+
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+
+      color: white;
+      background-color: #6ca300;
+
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        color: azure;
+        background-color: #7c0;
+      }
     }
   }
 }

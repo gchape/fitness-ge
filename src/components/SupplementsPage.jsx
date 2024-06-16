@@ -1,20 +1,30 @@
 import styles from "../css/Products.module.css";
 
+import SortBar from "./static/SortBar";
+import Product from "./static/Product";
+
 import { useLoaderData } from "react-router-dom";
+import { useState } from "react";
 
 function SupplementsPage() {
-  const supplements = useLoaderData();
+  const [supplements, setSupplements] = useState(useLoaderData());
 
   return (
-    <div className={styles.product_list}>
-      {supplements?.map(({ url, url_image, price }) => (
-        <div key={url} className={styles.product_card}>
-          <img src={url_image} />
-          <p>{url.match(/\/(.*?)\//)[1].replace(/-/g, " ")}</p>
-          <code>{price}$</code>
-        </div>
-      ))}
-    </div>
+    <>
+      <SortBar setData={setSupplements} />
+      <div className={styles.product_list}>
+        {supplements?.map(({ url, url_image, price }, i) => (
+          <Product
+            key={url}
+            product={supplements[i]}
+            url_image={url_image}
+            styles={styles}
+            price={price}
+            url={url}
+          />
+        ))}
+      </div>
+    </>
   );
 }
 

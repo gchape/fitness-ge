@@ -3,10 +3,9 @@
   padding: 0 3.5px;
   font-size: 1.2rem;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 .login:hover {
-  color: #007bff;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 600px) {

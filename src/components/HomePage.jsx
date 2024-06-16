@@ -12,6 +12,7 @@ function HomePage() {
   return (
     <>
       <Index />
+      <hr style={{opacity: "0.15"}}/>
       {url.pathname === "/" ? (
         <>
           <Aside />
