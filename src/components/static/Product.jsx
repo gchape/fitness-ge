@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
+import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 
 function Product({ styles, url, url_image, price, product }) {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
 
   return (
@@ -18,7 +20,7 @@ function Product({ styles, url, url_image, price, product }) {
           });
         }}
       >
-        Add to cart
+        {t("Add to cart")}
       </button>
     </div>
   );

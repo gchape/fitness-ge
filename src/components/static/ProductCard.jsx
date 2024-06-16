@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
+import { useTranslation } from "react-i18next";
 import styles from "../../css/ProductCard.module.css";
 
 import { useDispatch } from "react-redux";
 
 function ProductCard({ index, product }) {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
 
   return (
@@ -28,7 +30,7 @@ function ProductCard({ index, product }) {
           });
         }}
       >
-        Remove
+        {t("Remove")}
       </button>
     </div>
   );

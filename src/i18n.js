@@ -98,6 +98,8 @@ i18n
           "Cardio Zone": "კარდიო ზონა",
           "Life Fitness": "Life Fitness",
           month: "თვე",
+          Remove: "წაშლა",
+          "Add to cart": "კალათაში",
         },
       },
     },
