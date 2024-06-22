@@ -5,13 +5,23 @@ import Product from "./static/Product";
 
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import FilterBar from "./static/FilterBar";
 
 function WeightsPage() {
   const [weights, setWights] = useState(useLoaderData());
 
   return (
     <>
-      <SortBar setData={setWights} />
+      <div
+        style={{
+          display: "flex",
+          alignItems: "flex-start",
+          justifyContent: "space-between",
+        }}
+      >
+        <FilterBar items={weights} setFilteredItems={setWights} />
+        <SortBar setData={setWights} />
+      </div>
       <div className={styles.product_list}>
         {weights?.map(({ url, url_image, price }, i) => (
           <Product

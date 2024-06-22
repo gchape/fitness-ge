@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useTranslation } from "react-i18next";
 import styles from "../../css/NavBar.module.css";
 import { NavLink } from "react-router-dom";
@@ -11,6 +12,9 @@ function NavBar({ setMenuMode }) {
 
   return (
     <div className={styles.navbar}>
+      <NavLink to={"/"} onClick={handleMenuClose}>
+        {t("navbar.Home")} ↩️
+      </NavLink>
       <NavLink to={"/supplements"} onClick={handleMenuClose}>
         {t("navbar.Supplements")} 💊
       </NavLink>

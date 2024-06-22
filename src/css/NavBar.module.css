@@ -24,6 +24,9 @@
   box-sizing: content-box;
   padding: 12.5px 20px;
 }
+.navbar a:first-child {
+  display: none;
+}
 .navbar a:hover {
   color: #000;
   background-color: #eaeaea;
@@ -32,5 +35,8 @@
 @media screen and (max-width: 600px) {
   .navbar a {
     font-size: 0.95rem;
+  }
+  .navbar a:first-child {
+    display: flex;
   }
 }/*# sourceMappingURL=NavBar.module.css.map */
