@@ -5,13 +5,23 @@ import Product from "./static/Product";
 
 import { useLoaderData } from "react-router-dom";
 import { useState } from "react";
+import FilterBar from "./static/FilterBar";
 
 function SupplementsPage() {
   const [supplements, setSupplements] = useState(useLoaderData());
 
   return (
     <>
-      <SortBar setData={setSupplements} />
+      <div
+        style={{
+          display: "flex",
+          alignItems: "flex-start",
+          justifyContent: "space-between",
+        }}
+      >
+        <FilterBar items={supplements} setFilteredItems={setSupplements} />
+        <SortBar setData={setSupplements} />
+      </div>
       <div className={styles.product_list}>
         {supplements?.map(({ url, url_image, price }, i) => (
           <Product

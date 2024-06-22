@@ -1,35 +1,58 @@
+/* eslint-disable react/prop-types */
 import { useTranslation } from "react-i18next";
+
+import styles from "../../css/SortBar.module.css";
 
 function SortBar({ setData }) {
   const { t } = useTranslation();
 
-  const selectStyle = {
-    marginLeft: "10px",
-    padding: "8px",
-    fontSize: "14px",
-    borderRadius: "5px",
-    border: "1px solid #ccc",
-    width: "100%",
-    maxWidth: "180px",
-    boxSizing: "border-box",
-  };
-
   const handleSortChange = (e) => {
     const sortOrder = parseInt(e.target.value);
+    const title = (url) => url.match(/\/(.*?)\//)[1].replace(/-/g, " ");
 
-    setData((data) =>
-      data.slice().sort((d1, d2) => (d1.price - d2.price) * sortOrder)
-    );
+    setData((data) => {
+      switch (e.target.selectedOptions[0].id) {
+        case "Asc":
+        case "Desc":
+          return data
+            .slice()
+            .sort((item1, item2) => (item1.price - item2.price) * sortOrder);
+        case "A":
+        case "Z":
+          return data
+            .slice()
+            .sort(
+              (item1, item2) =>
+                title(item1.url).localeCompare(title(item2.url)) * sortOrder
+            );
+      }
+    });
   };
 
   return (
-    <select style={selectStyle} defaultValue="" onChange={handleSortChange}>
+    <select
+      className={styles.sort_bar}
+      defaultValue=""
+      onChange={handleSortChange}
+    >
       <option defaultValue hidden>
         {t("sort.by")}
       </option>
       <optgroup label={t("Price")}>
-        <option value="1">{t("sort.Ascending")}</option>
-        <option value="-1">{t("sort.Descending")}</option>
+        <option value="1" id="Asc">
+          {t("sort.Ascending")}
+        </option>
+        <option value="-1" id="Desc">
+          {t("sort.Descending")}
+        </option>
+      </optgroup>
+      <optgroup label={t("Alphabet")}>
+        <option value="1" id="A">
+          {t("sort.A...Z")}
+        </option>
+        <option value="-1" id="Z">
+          {t("sort.Z...A")}
+        </option>
       </optgroup>
     </select>
   );
