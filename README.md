@@ -9,4 +9,4 @@ This is a university project for a fitness website. The website lists products s
 - React Router
 - Sass
 - CSS Modules
-- Firebase Authentication
+- Kinde
